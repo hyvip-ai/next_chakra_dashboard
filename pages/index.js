@@ -7,7 +7,7 @@ import RightColumn from "../components/RightColumn";
 export default function Home() {
   return (
     <React.Fragment>
-      <Flex h="100vh" flexDirection="row" overflow="hidden" maxWidth="2000px">
+      <Flex h={['none','none',"100vh"]} flexDirection={["column","column","row","row"]} overflow={["auto","auto","hidden","hidden"]} maxWidth="2000px">
         {/* column 1 */}
         <ColumnLeft />
         {/* column 2  */}

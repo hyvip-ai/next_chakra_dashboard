@@ -4,8 +4,8 @@ import {FiSearch} from 'react-icons/fi'
 import {FiBell} from 'react-icons/fi'
 function InputHeader() {
   return (
-    <Flex justifyContent="space-evenly" width="100%">
-        <InputGroup variant="outline" w="70%">
+    <Flex justifyContent="space-between" width="100%">
+        <InputGroup variant="outline" w="80%">
       <InputLeftElement
         pointerEvents="none"
         children={<FiSearch color="gray.300" />}
@@ -15,6 +15,10 @@ function InputHeader() {
     <IconButton borderRadius="50%" bg="white" color="#000">
       <FiBell/>
     </IconButton>
+    <Flex
+    h={30} w={30} color="#fff" bg="#b57295" alignItems="center" justifyContent="center" borderRadius="50%" ml="-8" mt="-3" zIndex="100">
+      2
+    </Flex>
     </Flex>
   );
 }

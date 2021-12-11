@@ -8,11 +8,12 @@ export function MiddleColumn() {
   return (
     <>
       <Flex
-        width="55%"
+        width={["100%","100%","55%","55%"]}
         minH="100vh"
         overflow="auto"
         p="3%"
         flexDirection="column"
+        position="relative"
       >
         <MiddleHeader />
         <Chart />

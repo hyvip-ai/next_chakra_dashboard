@@ -8,14 +8,13 @@ function ColumnLeft() {
     const [className, setClassName] = useState('home')
     return (
         <Flex
-          w="15%"
+          w={["100%","100%","15%"]}
           flexDirection="column"
           alignItems="center"
           backgroundColor="#020202"
           color="#fff"
-          h="100%"
         >
-          <Flex flexDirection="column" justifyContent="space-between" h="100%">
+          <Flex flexDirection="column" justifyContent="space-between" w={["100%","100%"]} h="100%">
             <Flex flexDirection="column" as="nav" h="80%">
               <Heading
                 h="20%"
@@ -23,16 +22,17 @@ function ColumnLeft() {
                 fontSize="4xl"
                 alignItems="center"
                 letterSpacing="tight"
+                textAlign="center"
               >
                 Rise.
               </Heading>
               <Flex
                 h="80%"
-                flexDirection="column"
-                alignItems="flex-start"
+                flexDirection={['row','row',"column"]}
+                alignItems="center"
                 justifyContent="space-evenly"
               >
-                <Flex _hover={{color:"red.400"}} color={className==='home'?"red.500":"#fff"} className="sidebar-items">
+                <Flex _hover={{color:"red.400"}} onClick={()=>{setClassName('home')}} color={className==='home'?"red.500":"#fff"} textAlign="center" className="sidebar-items">
                   <NavLink icon={FiHome} text={'Home'}/>
                 </Flex>
 
