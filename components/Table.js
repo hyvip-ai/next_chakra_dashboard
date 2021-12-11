@@ -1,21 +1,39 @@
-import React from 'react'
-import {Table, Thead, Th , Td , Flex, Avatar ,Tbody,Tr,Text, IconButton, Divider } from "@chakra-ui/react"
+import React from "react";
+import {
+  Table,
+  Thead,
+  Th,
+  Td,
+  Flex,
+  Avatar,
+  Tbody,
+  Tr,
+  Text,
+  IconButton,
+  Divider,
+} from "@chakra-ui/react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 function TableComponent() {
-  const [display, setDisplay] = React.useState(true)
-    return (
-      <Flex flexDirection="column" w="100%">
-        <Table textAlign="center">
+  const [display, setDisplay] = React.useState(true);
+  return (
+    <Flex flexDirection="column" w="100%">
+      <Table textAlign="center">
         <Thead>
-          <Th>Name Of Transaction</Th>
-          <Th>Category</Th>
-          <Th>Cashback</Th>
-          <Th>Amount</Th>
+          <Tr>
+            <Th>Name Of Transaction</Th>
+            <Th>Category</Th>
+            <Th>Cashback</Th>
+            <Th>Amount</Th>
+          </Tr>
         </Thead>
         <Tbody>
           <Tr>
             <Td>
-              <Flex alignContent="center" justifyContent="space-evenly" alignItems="center">
+              <Flex
+                alignContent="center"
+                justifyContent="space-evenly"
+                alignItems="center"
+              >
                 <Avatar
                   name="Amazon"
                   backgroundColor="gray.900"
@@ -34,7 +52,11 @@ function TableComponent() {
           </Tr>
           <Tr>
             <Td>
-              <Flex alignContent="center" justifyContent="space-evenly" alignItems="center">
+              <Flex
+                alignContent="center"
+                justifyContent="space-evenly"
+                alignItems="center"
+              >
                 <Avatar
                   name="Starbucks"
                   backgroundColor="gray.500"
@@ -53,7 +75,11 @@ function TableComponent() {
           </Tr>
           <Tr>
             <Td>
-              <Flex alignContent="center" justifyContent="space-evenly" alignItems="center">
+              <Flex
+                alignContent="center"
+                justifyContent="space-evenly"
+                alignItems="center"
+              >
                 <Avatar
                   name="Youtube"
                   backgroundColor="red.500"
@@ -71,9 +97,13 @@ function TableComponent() {
             <Td>-$242.00</Td>
           </Tr>
 
-          <Tr display={display?'':'none'}>
+          <Tr display={display ? "" : "none"}>
             <Td>
-              <Flex alignContent="center" justifyContent="space-evenly" alignItems="center">
+              <Flex
+                alignContent="center"
+                justifyContent="space-evenly"
+                alignItems="center"
+              >
                 <Avatar
                   name="Lunch"
                   backgroundColor="orange.500"
@@ -91,10 +121,13 @@ function TableComponent() {
             <Td>-$242.00</Td>
           </Tr>
 
-
-          <Tr display={display?'':'none'}>
+          <Tr display={display ? "" : "none"}>
             <Td>
-              <Flex alignContent="center" justifyContent="space-evenly" alignItems="center">
+              <Flex
+                alignContent="center"
+                justifyContent="space-evenly"
+                alignItems="center"
+              >
                 <Avatar
                   name="Sweets"
                   backgroundColor="yellow.500"
@@ -113,12 +146,25 @@ function TableComponent() {
           </Tr>
         </Tbody>
       </Table>
-      <Flex mt={4} w="100%" justifyContent="center" alignItems="center" position="relative">
-        <Divider position="absolute"/>
-        <IconButton onClick={()=>{setDisplay((prev)=>{return !prev})}} icon={!display?<FiChevronDown/>:<FiChevronUp />}></IconButton>
+      <Flex
+        mt={4}
+        w="100%"
+        justifyContent="center"
+        alignItems="center"
+        position="relative"
+      >
+        <Divider position="absolute" />
+        <IconButton
+          onClick={() => {
+            setDisplay((prev) => {
+              return !prev;
+            });
+          }}
+          icon={!display ? <FiChevronDown /> : <FiChevronUp />}
+        ></IconButton>
       </Flex>
-      </Flex>
-    )
+    </Flex>
+  );
 }
 
-export default TableComponent
+export default TableComponent;
