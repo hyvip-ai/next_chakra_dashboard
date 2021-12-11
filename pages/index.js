@@ -1,7 +1,8 @@
-import { Flex,Heading,Text,Avatar,IconButton,Table,Td,Tr,Th,Tbody,Thead } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import ColumnLeft from "../components/ColumnLeft";
 import { MiddleColumn } from '../components/MiddleColumn'
+import RightColumn from "../components/RightColumn";
 
 export default function Home() {
   return (
@@ -14,13 +15,7 @@ export default function Home() {
         <MiddleColumn />
        
         {/* column 3 */}
-        <Flex
-          width="30%"
-          p="3%"
-          backgroundColor="gray.100"
-          minHeight="100vh"
-          overflow="auto"
-        ></Flex>
+        <RightColumn />
       </Flex>
     </React.Fragment>
   );

@@ -1,15 +1,9 @@
 import React from "react";
 import Chart from "../components/Chart";
-import  {FiCalendar}  from "react-icons/fi";
 import TableComponent from "./Table";
-import {
-  Flex,
-  Heading,
-  Text,
-  Table,
-  IconButton,
-
-} from "@chakra-ui/react";
+import { Flex, Heading, Text, Table, IconButton } from "@chakra-ui/react";
+import MiddleHeader from "./MiddleHeader";
+import TransactionRow from "./TransactionRow";
 export function MiddleColumn() {
   return (
     <>
@@ -20,36 +14,12 @@ export function MiddleColumn() {
         p="3%"
         flexDirection="column"
       >
-        <Heading as="h1" fontWeight="normal" mb={4} letterSpacing="tight">
-          Welcome Back,
-          <Flex fontWeight="bold" display="inline-flex">
-            Rajat
-          </Flex>
-        </Heading>
-        <Text color="gray" fontSize="sm">
-          My Balance
-        </Text>
-        <Text fontSize="2xl" fontWeight="bold">
-          $5750.20
-        </Text>
+        <MiddleHeader />
         <Chart />
-
-        <Flex my={8} justifyContent="space-between" alignItems="center">
-          <Flex alignItems="baseline">
-            <Heading>Transactions</Heading>
-            <Text color="gray.500" ml={6} verticalAlign="text-bottom">
-              Apr 2021
-            </Text>
-          </Flex>
-          <IconButton
-            variant="solid"
-            colorScheme="orange"
-            icon={<FiCalendar />}
-          />
-        </Flex>
+        <TransactionRow />
 
         <Flex>
-         <TableComponent />
+          <TableComponent />
         </Flex>
       </Flex>
     </>
